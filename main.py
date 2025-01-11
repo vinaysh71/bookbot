@@ -6,10 +6,13 @@ def count_characters(text):
     l_text = text.lower()
     res = {}
     for c in l_text:
-        if res[c]:
+        if c in res:
             res[c] += 1
         else:
             res[c] = 1
+    
+    print(res)
+    
 
 def main():
     with open('books/frankenstein.txt') as f:
